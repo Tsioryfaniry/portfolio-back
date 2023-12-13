@@ -13,14 +13,11 @@ export class HeroService {
     }
     async getHero(){
         return 1
-    return new Promise((resolve,reject)=>{
-    return resolve(
-        {
-            title:'title',
-            image: 'image.png'
-        }
-    )
+//     return new Promise((resolve,reject)=>{
+   
     
-})
+// })
+
     }
+
 }
