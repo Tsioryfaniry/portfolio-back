@@ -7,8 +7,7 @@ export class HeroController {
     @Post()
     async postHero(@Body() body){
         console.log(body)
-        return await this.heroService.createOrUpdateHero(body.title, body.image).then(data=>data)
-
+        return await this.heroService.createOrUpdateHero(body.title, body.image).then(data=>data)   
     }
    
     @Get()
