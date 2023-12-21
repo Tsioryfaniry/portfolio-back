@@ -17,5 +17,10 @@ model User {
   password String   @db.VarChar(255)
   username String   @db.VarChar(255)
   createAt DateTime @default(now())
-  updateAt DateTime @updatedAt
+}
+
+model Test {
+  tableId Int    @id
+  table   String
+  column  String
 }

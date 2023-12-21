@@ -1,12 +1,10 @@
-import { Module } from '@nestjs/common';
+import { Global, Module } from '@nestjs/common';
 import { HeroController } from './hero.controller';
-import { AppService } from 'src/app.service';
 import { HeroService } from './hero.service';
-
+import { PrismaService } from 'src/prisma/prisma.service';
 @Module({
     controllers:[HeroController],
-    providers: [HeroService]
-
+    providers: [HeroService],
 })
 export class HeroModule {
 
