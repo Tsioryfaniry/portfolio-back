@@ -1,27 +1,16 @@
-import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
+import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity()
-export class Test {
-
+export class User {
   @PrimaryGeneratedColumn()
-  tableId: number;
+  id: number;
 
   @Column()
-  table: string;
+  firstName: string;
 
   @Column()
-  column: string;
+  lastName: string;
+
+  @Column({ default: true })
+  isActive: boolean;
 }
-// const test = new Test()
-// async function  TestRepository(){
-//     test.table = "table1"
-//     test.column = "column1"
-//     await this.test.save()
-// }
-// TestRepository()
-// const test = [
-//     new Test({ table: "John Doe", column: "johndoe@example.com" }),
-//     new Test({ table: "Jane Doe", column: "janedoe@example.com" }),
-//   ];
-  
-//   await TestRepository.save(test);
